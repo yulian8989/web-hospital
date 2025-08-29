@@ -21,7 +21,7 @@ class Specialist extends Model
         return $this->hasMany(Doctor::class);
     }
 
-    public function hospitals()
+    public function hospitals() //relasi many to many
     {
         return $this->belongsToMany(Hospital::class, 'hospital_specialists');
     }
